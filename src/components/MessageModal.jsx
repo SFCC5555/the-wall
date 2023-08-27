@@ -47,7 +47,7 @@ const MessageModal = () => {
                     <div>
                       <button id="font" type="button" className={`w-full border-2 border-gray-200 hover:border-black py-1 px-1 sm:px-2 text-xs sm:text-base font-semibold italic ${font}-font`} onClick={()=>setFontMenuStatus(prev=>!prev)}>{font[0].toUpperCase()}{font.slice(1)}</button>
                       {fontMenuStatus&&<section className="border-2 border-gray-200 p-1 pb-2 h-56 overflow-y-scroll ">
-                        {fontList.map(f=><div key={f} onClick={()=>setFont(f)} className={`${f}-font italic font-semibold cursor-pointer hover:opacity-80 border-b-2`}>{f[0].toUpperCase()}{f.slice(1)}</div>)}
+                        {fontList.map(f=><div key={f} onClick={()=>setFont(f)} className={`${f}-font text-xs sm:text-base italic font-semibold cursor-pointer hover:opacity-80 border-b-2`}>{f[0].toUpperCase()}{f.slice(1)}</div>)}
                       </section>}
                     </div>
                   </div>
@@ -56,7 +56,7 @@ const MessageModal = () => {
                     <div>
                       <button id="color" type="button" className={`w-full border-2 border-gray-200 hover:border-black py-1 px-1 sm:px-2 text-xs sm:text-base font-semibold italic ${color}-color`} onClick={()=>setColorMenuStatus(prev=>!prev)}>{color[0].toUpperCase()}{color.slice(1)} <i className="bi bi-pencil-fill" /></button>
                       {colorMenuStatus&&<section className="border-2 border-gray-200 p-1 pb-2 h-56 overflow-y-scroll ">
-                        {colorList.map(c=><div key={c} onClick={()=>setColor(c)} className={`flex justify-between ${c}-color italic font-semibold cursor-pointer hover:opacity-80 border-b-2`}>{c[0].toUpperCase()}{c.slice(1)}<i className={`bi bi-pencil-fill`} /></div>)}
+                        {colorList.map(c=><div key={c} onClick={()=>setColor(c)} className={`flex justify-between ${c}-color italic font-semibold text-xs sm:text-base cursor-pointer hover:opacity-80 border-b-2`}>{c[0].toUpperCase()}{c.slice(1)}<i className={`bi bi-pencil-fill`} /></div>)}
                       </section>}
                     </div>
                   </div>
