@@ -346,7 +346,7 @@ const Wall = () => {
     ]
 
   return (
-    <section className="wall pt-12 sm:pt-20 p-4 sm:p-8 flex flex-wrap content-start gap-3 sm:gap-5">
+    <section className="wall pt-20 p-4 sm:p-8 flex flex-wrap content-start gap-3 sm:gap-5">
         {
             messages.map(m=><div key={m._id} className={`${m.font}-font max-w h-fit p-2 font-medium italic flex flex-col`}>
                 <p className="text-2xl" >{m.content}</p>
