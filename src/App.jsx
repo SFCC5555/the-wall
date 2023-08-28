@@ -5,6 +5,7 @@ import { Wall } from "./components/Wall"
 
 function App() {
 
+    // Retrieve the 'message' state from the Redux store
   const message = useSelector(state=>state.message);
 
   return (

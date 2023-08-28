@@ -1,17 +1,19 @@
-// Importing base styles, components and utilities from Tailwind CSS
+// Importing base styles, components, and utilities from Tailwind CSS
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-$fonts: ('awesome','bank-gothic','basileus','bauhaus',
-        'bellefair','bradley-hand','brush-script','cascadia-code',
-        'daft-font','digital-7','ghosts','harlow-solid','kapital-kanji',
-        'kartoons','linkin-font','ocr','old-english',
+// Define a list of custom fonts
+$fonts: ('awesome', 'bank-gothic', 'basileus', 'bauhaus',
+        'bellefair', 'bradley-hand', 'brush-script', 'cascadia-code',
+        'daft-font', 'digital-7', 'ghosts', 'harlow-solid', 'kapital-kanji',
+        'kartoons', 'linkin-font', 'ocr', 'old-english',
         'pixel');
 
-$colors: (black,gray,red,orange,yellow,lime,green,teal,cyan,blue,indigo,violet,purple,fuchsia,pink);
+// Define a list of custom colors
+$colors: (black, gray, red, orange, yellow, lime, green, teal, cyan, blue, indigo, violet, purple, fuchsia, pink);
 
-// Importing a fonts
+// Import custom fonts
 @each $font in $fonts {
   @font-face {
     font-family: $font;
@@ -21,14 +23,12 @@ $colors: (black,gray,red,orange,yellow,lime,green,teal,cyan,blue,indigo,violet,p
 
 // Setting box-sizing, margin, and padding for all elements in the document
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-// Color and font variables defined in the :root selector
-//:root {}
-
+// Apply custom fonts
 @each $font in $fonts {
   .#{$font}-font {
     font-family: $font, 'sans-serif';
@@ -36,29 +36,35 @@ $colors: (black,gray,red,orange,yellow,lime,green,teal,cyan,blue,indigo,violet,p
   }
 }
 
+// Apply custom text colors
 @each $color in $colors {
   .#{""+$color}-color {
     color: $color;
   }
 }
 
+// Styling for elements with the .wall class
 .wall {
-  background-image: url('./assets//images//wall-background.jpg');
+  background-image: url('./assets/images/wall-background.jpg');
   width: 100%;
-  min-height: calc(100svh);
+  min-height: calc(100vh);
 }
 
+// Styling for elements with the .preview class
 .preview {
-  background-image: url('./assets//images//wall-background.jpg');
+  background-image: url('./assets/images/wall-background.jpg');
   background-size: 160%;
   box-shadow: inset 0px 0px 75px rgba(0, 0, 0, 0.5);
 }
 
+// Styling for elements with the .min-h class
 .min-h {
   min-height: 180px;
 }
 
+// Media query for screens with a minimum width of 600px
 @media screen and (min-width: 600px) {
+  // Styling for elements with the .max-w class within the media query
   .max-w {
     max-width: 25%;
   }
