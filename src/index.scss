@@ -62,6 +62,37 @@ $colors: (black, gray, red, orange, yellow, lime, green, teal, cyan, blue, indig
   min-height: 180px;
 }
 
+/* Define the animation for all the dots */
+.dot1, .dot2, .dot3 {
+  animation: dot-animation 3s infinite;
+}
+
+/* Define the 'dot-animation' keyframes animation */
+@keyframes dot-animation {
+  0% {
+    opacity: 1; /* The first dot is fully opaque */
+  }
+  33.33% {
+    opacity: 0; /* The first dot disappears */
+  }
+  66.66% {
+    opacity: 0; /* The second dot remains invisible */
+  }
+  100% {
+    opacity: 1; /* The third dot is fully opaque */
+  }
+}
+
+/* Delay the start of the animation for the second dot by 1 second */
+.dot2 {
+  animation-delay: 1s;
+}
+
+/* Delay the start of the animation for the third dot by 2 seconds */
+.dot3 {
+  animation-delay: 2s;
+}
+
 // Media query for screens with a minimum width of 600px
 @media screen and (min-width: 600px) {
   // Styling for elements with the .max-w class within the media query
