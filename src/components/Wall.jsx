@@ -48,7 +48,7 @@ const Wall = () => {
               <p className="text-2xl">{m.message}</p> {/* Render the message content */}
               <p className="text-sm self-end">-{m.sign}</p> {/* Render the author's name */}
             </div>
-          )):<p>Loading...</p>}
+          )):<p className="text-xl italic opacity-50" >Loading...</p>}
         </section>}
       </>
 
