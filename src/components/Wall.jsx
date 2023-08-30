@@ -40,7 +40,7 @@ const Wall = () => {
     // Render the Wall section
     return (
       <>
-        {!error?
+        {error?
           <p className="pt-20 p-8 text-xl italic text-red-500" ><i className="bi bi-exclamation-octagon-fill" /> Network Error: {error.message}</p>
           :<section className="wall pt-20 p-4 sm:p-8 sm:pt-20 flex flex-wrap content-start gap-3 sm:gap-5">
           {messages?messages.map((m) => (
