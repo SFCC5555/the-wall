@@ -40,7 +40,7 @@ const Wall = () => {
     // Render the Wall section
     return (
       <>
-        {error?
+        {!error?
           <p className="pt-20 p-8 text-xl italic text-red-500" ><i className="bi bi-exclamation-octagon-fill" /> Network Error: {error.message}</p>
           :<section className="wall pt-20 p-4 sm:p-8 sm:pt-20 flex flex-wrap content-start gap-3 sm:gap-5">
           {messages?messages.map((m) => (
@@ -48,7 +48,7 @@ const Wall = () => {
               <p className="text-2xl">{m.message}</p> {/* Render the message content */}
               <p className="text-sm self-end">-{m.sign}</p> {/* Render the author's name */}
             </div>
-          )):<p className="text-xl italic font-semibold opacity-40" >Loading<span className="dot1"  >.</span><span className="dot2"  >.</span><span className="dot3" >.</span></p>}
+          )):<p className="text-xl italic font-medium opacity-30" >Loading<span className="dot1"  >.</span><span className="dot2"  >.</span><span className="dot3" >.</span></p>}
         </section>}
       </>
 
