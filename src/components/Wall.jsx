@@ -43,12 +43,12 @@ const Wall = () => {
         {error?
           <p className="pt-20 p-8" >Error: {error.message}</p>
           :<section className="wall pt-20 p-4 sm:p-8 sm:pt-20 flex flex-wrap content-start gap-3 sm:gap-5">
-          {messages?.map((m) => (
+          {messages?messages.map((m) => (
             <div key={m._id} className={`${m.font}-font ${m.color}-color max-w h-fit p-2 font-medium italic flex flex-col overflow-hidden`}>
               <p className="text-2xl">{m.message}</p> {/* Render the message content */}
               <p className="text-sm self-end">-{m.sign}</p> {/* Render the author's name */}
             </div>
-          ))}
+          )):<p>Loading...</p>}
         </section>}
       </>
 
