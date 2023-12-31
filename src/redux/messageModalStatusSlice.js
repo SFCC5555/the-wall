@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = false;
 
-export const messageSlice = createSlice({
-  name: 'message',
+export const messageModalStatusSlice = createSlice({
+  name: 'messageModalStatus',
   initialState,
   reducers: {
-    changeMessageStatus: (state, action) => {
+    changeMessageModalStatus: (state, action) => {
       // Update the 'message' state (true or false) to the value provided in the action's payload
       state = action.payload;
       return state;
@@ -14,5 +14,5 @@ export const messageSlice = createSlice({
   }
 });
 
-export const { changeMessageStatus } = messageSlice.actions;
-export default messageSlice.reducer;
+export const { changeMessageModalStatus } = messageModalStatusSlice.actions;
+export default messageModalStatusSlice.reducer;
